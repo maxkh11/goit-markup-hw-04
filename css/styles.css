@@ -11,6 +11,7 @@
   --accent-text-color: #757575;
   --background-accent-color: #ffffff;
   --background-second-color: #2f303a;
+  --fill-color: #afb1b8;
 }
 
 h1,
@@ -56,8 +57,7 @@ body {
 .page-header {
   /* padding-top: 32px;
   padding-bottom: 32px; */
-  border: 1px solid #ECECEC
-  ;
+  border: 1px solid #ececec;
 }
 
 .container {
@@ -120,6 +120,7 @@ body {
 
 /* ================INDEX================ */
 /* HEADER */
+
 .mail-address {
   font-weight: 500;
   font-size: 14px;
@@ -128,7 +129,15 @@ body {
   color: var(--accent-text-color);
   margin-right: 50px;
   padding: 32px 0;
-  display: block;
+  display: flex;
+}
+
+.social-icon-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .mail-address:hover,
@@ -143,7 +152,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
   padding: 32px 0;
-  display: block;
+  display: flex;
 }
 
 .phone-number:hover,
@@ -156,7 +165,17 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  background: rgba(47, 48, 58, 0.4);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/primary/hero.jpg);
   background-color: var(--background-second-color);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* width: 1600px;
+  height: 600px; */
 }
 
 .hero-title {
@@ -205,6 +224,11 @@ body {
 
 .benefits-list:not(:last-child) {
   margin-right: 30px;
+}
+
+.benefits-icon {
+  margin-bottom: 30px;
+  border-radius: 4px;
 }
 
 .benefits-title {
@@ -308,6 +332,83 @@ body {
   color: var(--accent-text-color);
 }
 
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+
+.social-list-icon {
+  fill: var(--fill-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--background-accent-color);
+}
+/* Постоянные клиенты */
+.headline-clients {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  padding-top: 94px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 94px;
+}
+
+.clients-item {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--fill-color);
+}
+
+.clients-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+}
+.clients-icon:hover,
+.clients-icon:hover {
+  fill: #188ce8;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  color: var(--accent-color);
+}
+
 /* FOOTER */
 .background-footer {
   background-color: var(--background-second-color);
@@ -346,6 +447,53 @@ body {
   color: var(--background-accent-color);
 }
 
+.container-footer {
+  display: flex;
+  justify-content: first baseline;
+  align-items: baseline;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* .container-footer {
+  margin-left: 300px;
+} */
+
+.headline-footer {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--background-accent-color);
+}
+
+.social-list-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.social-list-link-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-list-icon-footer {
+  fill: var(--background-accent-color);
+}
+
+.social-list-link-footer:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
 /* ================PORTFOLIO================ */
 
 /* Main */
@@ -403,12 +551,19 @@ body {
   margin-bottom: 0;
 }
 
+.work-list:hover,
+.work-list:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
 .work-element-name {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
 }
 
 .description-work {
