@@ -130,6 +130,7 @@ body {
   margin-right: 50px;
   padding: 32px 0;
   display: flex;
+  align-items: center;
 }
 
 .social-icon-header {
@@ -372,6 +373,10 @@ body {
   fill: var(--background-accent-color);
 }
 /* Постоянные клиенты */
+.clients {
+  padding: 94px 0;
+}
+
 .headline-clients {
   text-align: center;
   font-weight: 700;
@@ -379,7 +384,6 @@ body {
   line-height: 1.16;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
-  padding-top: 94px;
 }
 
 .clients-list {
@@ -387,11 +391,16 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding-bottom: 94px;
 }
 
 .clients-item {
   border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  border: 1px solid #2196f3;
   border-radius: 4px;
 }
 
@@ -409,13 +418,8 @@ body {
   height: 92px;
 }
 .clients-icon:hover,
-.clients-icon:hover {
+.clients-icon:focus {
   fill: #188ce8;
-}
-
-.clients-item:hover,
-.clients-item:focus {
-  color: var(--accent-color);
 }
 
 /* FOOTER */
@@ -457,18 +461,13 @@ body {
 }
 
 .container-footer {
-  display: flex;
-  justify-content: first baseline;
-  align-items: baseline;
+  display: block;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-/* .container-footer {
-  margin-left: 300px;
-} */
 
 .headline-footer {
   font-weight: 700;
@@ -476,6 +475,10 @@ body {
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--background-accent-color);
+}
+
+.container-footer-links {
+  display: block;
 }
 
 .social-list-footer {
